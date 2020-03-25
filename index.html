@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+  </head>
+  <body>
+    <h1>
+      This is a static template, there is no bundler or bundling involved!
+    </h1>
+    <button onclick="test()">Post Message</button>
+  </body>
+
+  <script>
+    function test() {
+      var domain = "https://g6ksn.csb.app/";
+      var message = "The time is: " + new Date().getTime();
+      console.log("domain:", domain, "-----", "message:", message);
+      window.opener.postMessage(
+        { v1: "Assign to value1", v2: "Assign to value2" },
+        "www.parentpage.com"
+      );
+    }
+  </script>
+</html>
