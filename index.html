@@ -18,10 +18,7 @@
       var domain = "https://g6ksn.csb.app/";
       var message = "The time is: " + new Date().getTime();
       console.log("domain:", domain, "-----", "message:", message);
-      window.opener.postMessage(
-        { v1: "Assign to value1", v2: "Assign to value2" },
-        "www.parentpage.com"
-      );
+      window.opener.postMessage('Message from child', '*');
     }
   </script>
 </html>
